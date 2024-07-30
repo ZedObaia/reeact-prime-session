@@ -25,3 +25,12 @@ html.dark body {
 html.dark .card {
     background: #071426;
 }
+
+.primary-background {
+    background-color: #0569A4;
+}
+
+.bricks-input:focus-within {
+    border: 1px solid #0569A4 !important;
+    box-shadow: 0 0 0 2px #C9E2FF !important;
+}
