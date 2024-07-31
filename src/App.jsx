@@ -132,29 +132,40 @@ export default function TailwindDemo() {
     locale('de');
 
     return (
-        <div
-            className="
-          bg-white
-          dark:bg-gray-800
-          p-10
-          rounded-xl
-          flex flex-col
-          gap-8
-          max-w-3xl
-        "
-        >
-            <h1 className="text-4xl text-black dark:text-white font-bold text-center">
-                Tailwind CSS + PrimeReact
-            </h1>
-            <div className="w-96">
-                <BricksDatePicker showIcon placeholder="Single selection"/>
-            </div>
-            <div className="w-96">
-                <BricksDatePicker showIcon selectionMode="range" placeholder="Range selection"/>
-            </div>
-            <div className="w-96">
-                <BricksDatePicker showIcon selectionMode="multiple" placeholder="Multiple selections"/>
+        <div className="flex">
+
+            <div
+                className="
+              bg-white
+              dark:bg-gray-800
+              p-10
+              rounded-xl
+              flex flex-col
+              gap-8
+              max-w-3xl
+              mx-auto
+              "
+            >
+                <h1 className="text-4xl text-black dark:text-white font-bold text-center">
+                    Alasco + PrimeReact
+                </h1>
+                <div className="w-96">
+                    <BricksDatePicker showIcon placeholder="Single selection"/>
+                </div>
+                <div className="w-96">
+                    <BricksDatePicker showIcon selectionMode="range" placeholder="Range selection"/>
+                </div>
+                <div className="w-96">
+                    <BricksDatePicker showIcon selectionMode="multiple" placeholder="Multiple selections"/>
+                </div>
+                <div className="w-96">
+                    <BricksDatePicker showIcon selectionMode="range" view="month" placeholder="Range month selection"/>
+                </div>
+                <div className="w-96">
+                    <BricksDatePicker showIcon selectionMode="single" view="year" placeholder="Single year selection"/>
+                </div>
             </div>
         </div>
+
     );
 }

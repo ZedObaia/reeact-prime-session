@@ -3,7 +3,7 @@ import {Calendar} from 'primereact/calendar';
 import {PrimeIcons} from 'primereact/api';
 
 
-export default function BricksDatePicker({showIcon, selectionMode = "single", placeholder}) {
+export default function BricksDatePicker({showIcon, selectionMode = "single", placeholder, view="date"}) {
     const [date, setDate] = useState(null);
 
     return <div
@@ -11,11 +11,13 @@ export default function BricksDatePicker({showIcon, selectionMode = "single", pl
                    flex flex-row space-x-2 h-12">
         <Calendar
             value={date}
-            onChange={(e) => setDate(e.value)} showIcon={showIcon}
+            onChange={(e) => setDate(e.value)}
+            showIcon={showIcon}
             icon={PrimeIcons.CALENDAR}
             iconPos="right"
             selectionMode={selectionMode}
             placeholder={placeholder}
+            view={view}
         />
     </div>
 }

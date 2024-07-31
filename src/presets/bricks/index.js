@@ -1,7 +1,7 @@
 import global from './global.js';
-import calendar from './calendar';
+import {calendar} from './calendar';
 
-export default {
-  global,
-  calendar,
-};
+export const bricksPT = {
+  calendar: calendar,
+  global: global
+}
