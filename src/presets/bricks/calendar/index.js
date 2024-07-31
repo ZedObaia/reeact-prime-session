@@ -128,8 +128,16 @@ export const calendar = {
         className: classNames('flex items-center justify-center cursor-pointer overflow-hidden relative', 'w-8 h-8 text-gray-600 dark:text-white/70 border-0 bg-transparent rounded-full transition-colors duration-200 ease-in-out', 'hover:text-gray-700 dark:hover:text-white/80 hover:border-transparent hover:bg-gray-200 dark:hover:bg-gray-800/80 ')
     },
     groupContainer: 'flex bg-white',
-    group: {
-        className: classNames('flex-1 bg-white shadow-lg', 'border-l border-gray-300 pr-0.5 pl-0.5 pt-0 pb-0', 'first:pl-0 first:border-l-0')
+    group: function year(_ref71){
+        let parent = _ref71.parent;
+        let props = _ref71.props;
+
+        return {
+            className: classNames(
+                'flex-1 bg-white', 'border-l border-gray-300 pr-0.5 pl-0.5 pt-0 pb-0', 'first:pl-0 first:border-l-0',
+                {'shadow-lg': props.view === 'date'}
+            )
+        }
     },
     transition: TRANSITIONS.overlay
 }
